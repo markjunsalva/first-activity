@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Mark Salva's portfolio showcasing web projects, skills, and future goal." />
+  <title>Mark Salva - Portfolio</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-flex">
+      <h1 class="logo">markcrosoft</h1>
+      <nav aria-label="Primary">
+        <ul class="nav">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#goals">Future Goal</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button id="theme-toggle" aria-label="Toggle Dark/Light Mode">🌙</button>
+    </div>
+  </header>
+
+  <main id="content">
+    <section class="hero" aria-labelledby="intro-title">
+      <div class="container hero-grid">
+        <div>
+          <h2 id="intro-title" contenteditable="false">Hello, I’m Mark Salva 👋</h2>
+          <p id="intro-text" class="lead" contenteditable="false">
+            A third-year Computer Science student at Caraga State University.<br>
+            I enjoy creating interactive and user-friendly web projects.
+          </p>
+          <a class="btn" href="#projects">Check my projects</a>
+          <button class="edit-btn btn-outline" data-target="intro-text,intro-title">Edit</button>
+        </div>
+        <figure class="profile">
+          <!-- ✅ Profile image with ID -->
+          <img id="profile-img" src="/assets/mark-photo.jpg" alt="Portrait of Mark Salva, Computer Science Student" />
+          <figcaption>Based in Butuan City, Philippines</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="about" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <h2 id="about-title">About</h2>
+        <p id="about-text" contenteditable="false">
+          I'm passionate about technology and currently focusing on web development in my class to improve my problem-solving skills and creativity.<br>
+          I've worked on projects like a responsive quiz app and an automated inventory system, which strengthened my skills in HTML, CSS, JavaScript, and GitHub, and inspired me to keep learning.
+        </p>
+        <button class="edit-btn btn-outline" data-target="about-text">Edit</button>
+      </div>
+    </section>
+
+    <section id="projects" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <h2 id="projects-title">Projects</h2>
+        <div id="projects-content" class="cards" contenteditable="false">
+          <article class="card">
+            <!-- ✅ Quiz project image with ID -->
+            <img id="project-quiz-img" src="/assets/quiz-app.png" alt="Interactive Quiz App built with JavaScript" />
+            <div class="card-body">
+              <h3>Quiz App</h3>
+              <p>An interactive quiz app with multiple-choice questions, score tracking, and a clean interface.</p>
+              <a class="btn btn-outline" href="#" target="_blank">View</a>
+            </div>
+          </article>
+          <article class="card">
+            <!-- ✅ Inventory project image with ID -->
+            <img id="project-inventory-img" src="/assets/inventory.png" alt="React-based Automated Inventory Management System" />
+            <div class="card-body">
+              <h3>Automated Inventory Management System</h3>
+              <p>A React-based app with product cards, sorting, filters, and modal popups.</p>
+              <a class="btn btn-outline" href="#" target="_blank">View</a>
+            </div>
+          </article>
+        </div>
+        <button class="edit-btn btn-outline" data-target="projects-content">Edit</button>
+      </div>
+    </section>
+
+    <section id="skills" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 id="skills-title">Skills</h2>
+        <ul id="skills-list" class="chips" role="list" contenteditable="false">
+          <li>HTML5</li>
+          <li>CSS3</li>
+          <li>JavaScript</li>
+          <li>Git and GitHub</li>
+          <li>Responsive Design</li>
+          <li>Problem Solving</li>
+        </ul>
+        <button class="edit-btn btn-outline" data-target="skills-list">Edit</button>
+      </div>
+    </section>
+
+    <section id="goals" class="section" aria-labelledby="goals-title">
+      <div class="container">
+        <h2 id="goals-title">Future Goal</h2>
+        <p id="goals-text" contenteditable="false">
+          My dream is to become a professional developer capable of building tools that make a real difference, whether for my career, my community, or my personal growth.
+        </p>
+        <button class="edit-btn btn-outline" data-target="goals-text">Edit</button>
+      </div>
+    </section>
+
+    <section id="contact" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title">Contact</h2>
+        <address>
+          Email: <a href="mailto:markjun.salva@carsu.edu.ph">markjun.salva@carsu.edu.ph</a><br />
+          Location: Butuan City, Philippines<br />
+          GitHub: <a href="https://github.com/markjunsalva" target="_blank" rel="noopener">
+            github.com/markjunsalva
+          </a>
+        </address>
+      </div>
+    </section>
+
+    <!-- ✅ New Upload Section -->
+    <section id="upload" class="section">
+      <div class="container">
+        <h2>Upload / Update Image</h2>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+          <input type="file" name="image" accept="image/*" required />
+          <select name="target">
+            <option value="profile">Profile photo</option>
+            <option value="project-quiz">Quiz project thumbnail</option>
+            <option value="project-inventory">Inventory project thumbnail</option>
+          </select>
+          <button type="submit" class="btn">Upload</button>
+        </form>
+        <p class="muted">After upload the page will reload and show your new image.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      © <span id="year">2025</span> Mark Salva 
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const toggleBtn = document.getElementById("theme-toggle");
+    toggleBtn.addEventListener("click", () => {
+      document.body.classList.toggle("dark");
+      toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+      localStorage.setItem("theme", document.body.classList.contains("dark") ? "dark" : "light");
+    });
+    if (localStorage.getItem("theme") === "dark") {
+      document.body.classList.add("dark");
+      toggleBtn.textContent = "☀️";
+    }
+
+    document.querySelectorAll(".edit-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        const targets = btn.dataset.target.split(",");
+        let editing = false;
+
+        targets.forEach(id => {
+          const el = document.getElementById(id);
+          if (el) {
+            if (!el.isContentEditable) {
+              el.contentEditable = "true";
+              editing = true;
+            } else {
+              el.contentEditable = "false";
+              localStorage.setItem(id, el.innerHTML);
+            }
+          }
+        });
+
+        btn.textContent = editing ? "Save" : "Edit";
+      });
+    });
+
+    ["intro-title", "intro-text", "about-text", "projects-content", "skills-list", "goals-text"].forEach(id => {
+      const saved = localStorage.getItem(id);
+      if (saved) {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = saved;
+      }
+    });
+
+    // ✅ Load current.json and update images dynamically
+    window.addEventListener("DOMContentLoaded", () => {
+      fetch("/current.json")
+        .then(r => r.json())
+        .then(cfg => {
+          if (cfg.profile) document.getElementById("profile-img").src = cfg.profile;
+          if (cfg["project-quiz"]) document.getElementById("project-quiz-img").src = cfg["project-quiz"];
+          if (cfg["project-inventory"]) document.getElementById("project-inventory-img").src = cfg["project-inventory"];
+        })
+        .catch(() => { /* ignore if missing */ });
+    });
+  </script>
+</body>
+</html>
